@@ -1,0 +1,291 @@
+body {
+    margin: 0;
+	/* background-image: url(../images/bg3.jpg); */
+    background-color: #becfeebb;
+	height: 100vh;
+	background-size: cover;
+	background-position: center;
+    font-family: "Sofia", sans-serif;
+}
+
+.sidebar {
+    margin: 0;
+    padding: 2px;
+    width: 200px;
+    background-color: #3b4b94;
+    /* background-image: url(../images/bg2.2.jpg); */
+    position: fixed;
+    height: 100%;
+    overflow: auto;
+
+}
+
+.sidebar a {
+    display: block;
+    color: rgb(255, 255, 255);
+    padding: 16px;
+    text-decoration: none;
+}
+
+.sidebar a.active {
+    background-color:  #274179;
+    color: white;
+}
+
+.sidebar a:hover:not(.active) {
+    background-color: rgba(103, 119, 165, 0.733);
+    border-right-style: inset;
+    border-right: 4px solid #ff214f;
+    color: white;
+}
+
+.toggle-collapse{
+    cursor: pointer;
+}
+
+.toggle-collapse .toggle-icons{
+    display: none;
+    justify-content: flex-end;
+    padding: 1.4rem 4rem;
+}
+
+.toggle-collapse .toggle-icons i{
+    font-size: 1.2rem;
+    color: white;
+}
+
+.collapse{
+    height: 30rem;
+}
+
+div.content {
+    margin-left: 200px;
+    padding: 1px 16px;
+    height: 1000px;
+}
+
+.content h2 {
+    font-size: 40px;
+    text-shadow: 3px 3px 3px #ababab;
+    margin-top: 30px;
+    color: rgb(0, 0, 0);
+}
+
+.content p {
+    margin: 20px;
+    color: rgb(0, 0, 0);
+}
+
+
+.logo img{
+    position: absolute;
+    float: right;
+    width: 90px;
+    top: 20px;
+    right: 30px;
+    height: auto;
+}
+
+/* button */
+
+.btn{
+    background-color: rgba(68, 89, 184, 0.925);
+    border-radius: 5px;
+	border: 2px solid rgb(67, 52, 131);
+	padding:5px 20px;
+	color: rgb(255, 255, 255);
+	text-decoration: none; 
+	bottom: 2px ;   
+}	
+
+.btn:hover{
+	background-color:  rgba(59, 102, 180, 0.849);
+    color: rgb(255, 255, 255);
+    box-shadow: 0 0 6px rgb(35, 44, 49);
+	transition: 0.3s ease;
+}
+
+.main-buttons {
+    max-width:1000px;
+    margin: 20px 200px;
+}
+
+.table>thead {
+    vertical-align: bottom;
+    background:  #4261a5;
+    color: white;
+    text-align: center;
+}
+
+.table{
+    background-color: transparent;
+    border: #1a2629;
+    color: rgb(0, 0, 0);
+}
+
+@media screen and (max-width: 1200px){
+    .table{
+        overflow-x: scroll;
+    }
+
+    .sidebar {
+        width: 150px;
+        height: 100%;       
+    }
+
+    .logo img{
+        width: 80px;
+    }
+
+    .content h2{
+        font-size: 45px;
+    }
+
+    div.content {
+        margin-left: 150px;
+        padding: 2px 16px;
+        height: 1000px;
+    }
+
+    .main-buttons {
+        padding: 0px 0px;
+        max-width:1000px;
+        margin: 20px;
+    }
+
+    .table td{
+        padding: 5px;
+        vertical-align: bottom;
+    }
+}
+
+
+@media screen and (max-width: 1100px) {
+    .logo img{
+        width: 70px;
+        top: 80px;
+        right: 40px;    
+    }
+
+    .content h2{
+        font-size: 35px;
+    }
+
+    .sidebar {
+        width: 100%;
+        height: auto;
+        position: relative;
+    }
+
+    .sidebar a {
+        float: left;
+    }
+
+    div.content {
+        margin-left: 0;
+    }
+}
+
+@media screen and (max-width: 650px){
+    .sidebar{
+        overflow-y: hidden;
+        height: 0rem;
+        min-height: 8vh;    
+        display: block !important;
+    }
+
+    .toggle-collapse .toggle-icons{
+        display: flex;
+    }
+    
+    .content h2{
+        font-size: 30px;
+    }
+
+    .logo img{
+        width: 50px;
+        position: relative;
+        float: left;
+        top: 10px;
+        left: 20px;
+    }
+}
+
+@media screen and (max-width: 520px) {
+    .sidebar{
+        width: 100%;
+        margin-right: 0;
+    }
+
+}
+
+@media screen and (max-width: 480px) {   
+    .main-buttons .btn3{
+        max-width:1000px;
+        margin: 8px;
+    }
+}
+
+@media screen and (max-width: 335px) {   
+    .content h2{
+        font-size: 20px;
+    }
+
+    .logo img{
+        width: 35px;
+        position: relative;
+        float: left;
+        top: 10px;
+        left: 20px;
+    }
+
+    .main-buttons .btn1{
+        max-width:1000px;
+        margin: 8px;
+    }
+
+    .main-buttons .btn2{
+        max-width:1000px;
+        margin: 8px;
+    }
+
+    .main-buttons .btn3{
+        max-width:1000px;
+        margin: 8px;
+    }
+}
+
+.table thead {
+    background-color: #274179;
+}
+.table-bordered>:not(caption)>* {
+    background-color: #3b4b94;
+}
+.pagination > li > a
+{
+    background-color: white;
+    color: #3b4b94;
+}
+
+.pagination > li > a:focus,
+.pagination > li > a:hover,
+.pagination > li > span:focus,
+.pagination > li > span:hover
+{
+    color: #5a5a5a;
+    background-color: #eee;
+    border-color: #ddd;
+}
+
+.pagination > .active > a
+{
+    color: white;
+    background-color: #3b4b94 !Important;
+    border: solid 1px #3b4b94 !Important;
+}
+
+.pagination > .active > a:hover
+{
+    background-color: #3b4b94 !Important;
+    border: solid 1px #3b4b94;
+}
