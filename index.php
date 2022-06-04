@@ -86,6 +86,10 @@ require_once 'requirements/config.php';
     </section>
     <!-- about us ends -->
     
+    <!-- Scroll Top Button -->
+    <button id="scroll-top"><i class="fas fa-arrow-up"></i></button>
+    <!-- Scroll Top Button Ends -->
+
     <?php
         //events section
         include 'components/events.php';
@@ -94,5 +98,14 @@ require_once 'requirements/config.php';
         include 'components/news.php'; 
         include 'components/footer.php'; 
     ?>
+    
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.0.1/js/bootstrap.min.js" integrity="sha512-EKWWs1ZcA2ZY9lbLISPz8aGR2+L7JVYqBAYTq5AXgBkSjRSuQEGqWx8R1zAX16KdXPaCjOCaKE8MCpU0wcHlHA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <script type="text/javascript" src="plugins/slick.min.js"></script>
+    <script src="javascript/testimonial.js"></script>
+    <script src="javascript/navbar.js"></script>
+    <script src="javascript/topscroll.js"></script>
 
 <body>

@@ -15,7 +15,7 @@
                 <div class="overlay">
 
                     <div class="text">
-                        <p class="team-name">Israil Alam</p>
+                        <p class="team-name">Rahul Soni</p>
                         <p class="team-designition mt-4">Head</p>
                     </div>
                 </div>
