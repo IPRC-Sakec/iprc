@@ -8,9 +8,10 @@
 
 body {
     font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5),rgba(0, 0, 0, 0.5)),url(../images/bg2.2.jpg);
+    /* background-image: linear-gradient(rgba(0, 0, 0, 0.5),rgba(0, 0, 0, 0.5)),url(../images/bg2.2.jpg);
     background-size: cover;
-    background-repeat: no-repeat;
+    background-repeat: no-repeat; */
+    background-color: rgb(189, 196, 201);
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -24,6 +25,7 @@ body {
 }
 
 h1 {    
+    font-size: 30px;
     font-weight: bold;
     margin: 0;
 }
@@ -39,21 +41,26 @@ p {
     color: white;
 }
 .container{
-    background-image: url(../images/bg2.2.jpg);
+    background-image: url(../images/formsbg.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
     border-radius: 10px;
-    box-shadow: 0 14px 28px rgb(0, 0, 0, 0.25), 0 10px 10px rgb(0, 0, 0, 0.22);
+    /* box-shadow: 0 14px 28px rgb(0, 0, 0, 0.25), 0 10px 10px rgb(0, 0, 0, 0.22); */
+    box-shadow: 0 4px 20px rgba(5, 57, 94, .5);
+    -moz-box-shadow: 0 4px 20px rgba(5, 57, 94, .5);
+    -webkit-box-shadow: 0 4px 20px rgba(5, 57, 94, .5);
     position: relative;
     overflow: hidden;
-    width: 1000px;
+    width: 900px;
     max-width: 100%;
-    min-height: 554px;
+    min-height: 500px;
     margin-top: 40px;
 }
 
 
 .form-container form{
     background: #fff;
-    padding: 20px 20px;
+    padding: 10px 10px;
     height: 100%;
     justify-content: center;
     align-items: center;
@@ -63,42 +70,39 @@ p {
 .form-container input{
     background: rgb(238, 238, 238);
     border: none;
-    border-radius: 20px;
-    padding: 12px 15px;
-    margin: 8px 0;
-    width: 100%;
+    border-radius: 5px;
+    padding: 4px 7px;
+    margin: 10px 0;
+    width: 55%;
 }
 
 .form-container select{
     background: rgb(238, 238, 238);
     border: none;
-    border-radius: 20px;
-    padding: 12px 35px;
-    margin: 8px 0;
-    width: 100%;
+    border-radius: 5px;
+    padding: 4px 7px;
+    margin: 10px 0;
+    width: 55%;
 }
 
 button{  
     background: rgb(59,146,191);
     background: radial-gradient(circle, rgb(79, 171, 218) 0%, rgba(38,44,150,1) 100%);
-    border-radius: 20px;
-    margin-top: 20px;
-	border: 1px solid #3338a1;  
-    box-shadow: 0 0 7px rgb(67, 67, 104);
+    border: 1px solid white;
+    border-radius: 5px;	
+	padding: 8px 15px;
 	color: rgb(255, 255, 255);
-	font-size: 12px;
-    font-weight: bold;
-    padding: 12px 35px;
-    letter-spacing: 1px;
-    text-transform: uppercase;
-    transition: transform 80ms ease-in;
+	text-decoration: none; 
+	bottom: 2px ;   
+    transition:0.5s;
 }	
 
 button:hover{
     background: rgb(59,146,191);
     background: radial-gradient(circle, rgb(92, 156, 240) 10%, rgba(38,44,150,1) 80%);
+    border: 1px solid rgba(38,44,150,1);
     color: rgb(255, 255, 255);
-    box-shadow: 0 0 1px rgb(0, 0, 0);
+    box-shadow: 0 0 15px rgb(0, 0, 0);
 }
 
 button:active{
@@ -148,10 +152,10 @@ button.btn{
 }
 
 .overlay{
-    /* background: #41c3ff;
+    background: #41c3ff;
     background: linear-gradient(to right, #2bceff,
-    #4154ff) no-repeat 0 0 / cover; */
-    background-image: url(../images/bg2);
+    #4154ff) no-repeat 0 0 / cover;
+    background-image: url(../images/formsbg.jpg);
     color: #fff;
     position: relative;
     left: -100%;
@@ -243,27 +247,46 @@ button.btn{
   }
 
   @media screen and (max-width: 600px) {
+
+    
+    h1 {    
+        color: #fff;
+        font-size: 30px;
+        font-weight: bold;
+        margin: 0;
+    }
+
+    p {
+        color: #fff;
+        font-size: 14px;
+        font-weight: 100;
+        line-height: 20px;
+        letter-spacing: 0.5px;
+        margin: 20px 0 30px;
+    }
+
     .overlay-panel{
         width: 100%;
         display: none;
     }
     .sign-in-container{
         width: 100%;
-    z-index: 999;
+        z-index: 999;
     }
     .sign-up-container{
         transform: translateX(0px) !important;
         width: 100%;
-    z-index: 999 !important;
+        z-index: 999 !important;
     
-    opacity: 1 !important;
+        opacity: 1 !important;
 
     }
     .small-device{
         display:block;
     }
     .container{
-        min-height: 781px;
+        min-height: 700px;
+        width: 500px;
     }
 
     a.btn{
@@ -271,25 +294,32 @@ button.btn{
         color: white;
         border-color: rgb(255, 255, 255); 
     }
-    
+
     .form-container form{
-        padding-top: 40px;
-        background: url(../images/bg2.jpg);
+        padding-top: 50px;
+        background: #41c3ff;
+        background: linear-gradient(to right, #2bceff,
+        #4154ff) no-repeat 0 0 / cover;
+        background-image: url(../images/formsbg.jpg);
         opacity: 1;
     }
 
     .form-container input{
-        background: transparent;
-        border: 1px solid rgb(255, 255, 255);
-        border-radius: 20px;
-        box-shadow: 0 0 5px rgba(94, 101, 105, 0.884);
+        background: rgb(238, 238, 238);
+        border: none;
+        border-radius: 5px;
+        padding: 4px 7px;
+        margin: 10px 0;
+        width: 55%;
     }
 
     .form-container select{
-        background: transparent;
-        border: 1px solid rgb(255, 255, 255);
-        border-radius: 20px;
-        box-shadow: 0 0 5px rgba(94, 101, 105, 0.884);
+        background: rgb(238, 238, 238);
+        border: none;
+        border-radius: 5px;
+        padding: 4px 7px;
+        margin: 10px 0;
+        width: 55%;
     }
     .alert{
         bottom: 0;
@@ -301,7 +331,7 @@ button.btn{
     
   }
 
-  @media screen and (min-width: 600px){
+  /* @media screen and (min-width: 600px){
     .forgot-password {
         background: transparent !important;
         position: absolute;
@@ -310,4 +340,4 @@ button.btn{
         transform: translate(-50%, -50%);
     }
 
-  }   
+  }    */
