@@ -4,7 +4,7 @@ spl_autoload_register('Myautoload');
 function Myautoload($className) {
     $path = "../classes/";
     $extension = ".class.php";
-    $fullPath = $path . $className . $extension;
+    $fullPath = $path . $className."classes" . $extension;
     if (!file_exists($fullPath)) {
         return false;
     }
