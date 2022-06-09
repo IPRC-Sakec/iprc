@@ -9,39 +9,19 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.0.1/css/bootstrap.min.css" integrity="sha512-Ez0cGzNzHR1tYAv56860NLspgUGuQw16GiOOp/I2LuTmpSK9xDXlgJz3XN4cnpXWDmkNBKXR/VDMTCnAaEooxA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="../css/signup.css">
     <title>IPR | Signup | Login</title>
-    <style>
-        /* .userContent {
-            padding: 10px 20px;
-            margin: auto;
-            width: 350px;
-            background-color: #f7f7f7;
-            box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
-        }
-
-        .userContent h3 {
-            font-size: 17px;
-        }
-
-        .userContent p {
-            font-size: 15px;
-        }
-
-        .userContent img {
-            max-width: 100%;
-            margin-bottom: 5px;
-        } */
-    </style>
+    
 </head>
 
 <body>
     <div class="container" id="container">
         <div class="form-container sign-up-container col-sm-12">
-            <h1>SIGN UP</h1>
-            <p>Please enter all the fields carefully</p>
-
-            <?php //For developer : please do not modify name attribute and required status of the input fields 
+        <?php //For developer : please do not modify name attribute and required status of the input fields 
             ?>
             <form action="signup.contr.php" method="POST">
+        <h1>SIGN UP</h1>
+            <p>Please enter all the fields carefully</p>
+
+            
                 <input name="fname" id='fname' type="text" placeholder="Enter First Name" required />
                 <input name="mname" id='mname' type="text" placeholder="Enter Middle Name" required />
                 <input name="lname" id='lname' type="text" placeholder="Enter Last Name" required />
@@ -70,8 +50,9 @@
         </div>
         <!-- Login starts -->
         <div class="form-container sign-in-container">
-            <h1>LOGIN</h1>
-            <form action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']) ?>" method="POST">
+           
+        <form action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']) ?>" method="POST">
+        <h1 style="margin: 80px;">LOGIN</h1>
                 <input type="email" name="emailid" class="form__field" placeholder="Enter Username" id='username' required />
                 <input type="password" name="password" class="form__field" placeholder="Enter Password" id='name' autocomplete="off" required />
                 </br>
