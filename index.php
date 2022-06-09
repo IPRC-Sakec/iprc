@@ -1,7 +1,7 @@
 <?php
 
 declare(strict_types=1);
-require_once 'classes/db.php';
+// require_once 'classes/db.php';
 require_once 'requirements/autoload.php';
 require_once 'requirements/config.php';
 
@@ -17,7 +17,7 @@ require_once 'requirements/config.php';
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.0.1/css/bootstrap.min.css" integrity="sha512-Ez0cGzNzHR1tYAv56860NLspgUGuQw16GiOOp/I2LuTmpSK9xDXlgJz3XN4cnpXWDmkNBKXR/VDMTCnAaEooxA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" type="text/css" href="plugins/slick-master/slick/slick.css" />
     <link rel="stylesheet" type="text/css" href="plugins/slick-master/slick/slick-theme.css" />
-    <link rel="stylesheet" href="css/style.css?v=<?php echo time(); ?>">
+    <link rel="stylesheet" href="css/style.css">
     <title>IPR Homepage</title>
 
 </head>
@@ -103,7 +103,7 @@ require_once 'requirements/config.php';
     <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.0.1/js/bootstrap.min.js" integrity="sha512-EKWWs1ZcA2ZY9lbLISPz8aGR2+L7JVYqBAYTq5AXgBkSjRSuQEGqWx8R1zAX16KdXPaCjOCaKE8MCpU0wcHlHA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="https://smtpjs.com/v3/smtp.js"></script>
-    <script type="text/javascript" src="plugins/slick.min.js"></script>
+    <script type="text/javascript" src="plugins/slick-master/slick/slick.min.js"></script>
     <script src="javascript/testimonial.js"></script>
     <script src="javascript/navbar.js"></script>
     <script src="javascript/topscroll.js"></script>

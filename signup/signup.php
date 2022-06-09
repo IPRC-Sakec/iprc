@@ -7,13 +7,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" rel="stylesheet" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.0.1/css/bootstrap.min.css" integrity="sha512-Ez0cGzNzHR1tYAv56860NLspgUGuQw16GiOOp/I2LuTmpSK9xDXlgJz3XN4cnpXWDmkNBKXR/VDMTCnAaEooxA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="css/signup.css?v=<?php echo time(); ?>">
+    <link rel="stylesheet" href="../css/signup.css">
     <title>IPR | Signup | Login</title>
-   
-    
-
     <style>
-        .userContent {
+        /* .userContent {
             padding: 10px 20px;
             margin: auto;
             width: 350px;
@@ -32,28 +29,23 @@
         .userContent img {
             max-width: 100%;
             margin-bottom: 5px;
-        }
+        } */
     </style>
 </head>
 
-
 <body>
     <div class="container" id="container">
-        <!-- sinUp PHP starts here -->
-        
-        
-                <h1>SIGN UP</h1>
-                <p>Please enter all the fields carefully</p>
+        <div class="form-container sign-up-container col-sm-12">
+            <h1>SIGN UP</h1>
+            <p>Please enter all the fields carefully</p>
 
-                
-
+            <?php //For developer : please do not modify name attribute and required status of the input fields 
+            ?>
+            <form action="signup.contr.php" method="POST">
                 <input name="fname" id='fname' type="text" placeholder="Enter First Name" required />
                 <input name="mname" id='mname' type="text" placeholder="Enter Middle Name" required />
                 <input name="lname" id='lname' type="text" placeholder="Enter Last Name" required />
                 <input name="email" id='email' type="email" placeholder="Enter Email" required />
-
-                <!-- <label class="form__field" for="cars"></label> -->
-
                 <select name="department" id="department" required>
                     <option value="none" selected disabled hidden>Select department</option>
                     <option value="elec">Electronics and Computer Science</option>
@@ -64,45 +56,32 @@
                     <option value="aids">Artificial Intelligence and Data Science</option>
                     <option value="cybsec">Cyber Security</option>
                 </select>
-                <input name="password" id='password' type="password" placeholder="Enter password" required />
-                <input name="confirmPassword" id='cpassword' type="password" class="form__field" placeholder="Enter Comfirm password" required />
-
-
-                <br><div class="spacer" style="height: 10px;"></div>
+                <input name="password" id='password' type="password" placeholder="Enter password" autocomplete="off" required />
+                <input name="confirmPassword" id='cpassword' type="password" class="form__field" placeholder="Enter Comfirm password" autocomplete="off" required />
+                </br>
                 <button name="signup">Sign Up</button>
+                
                 <div class="spacer" style="height: 10px;"></div>
                 <div class="small-device">
                     <p>Already have an Account! </p>
                     <a class="btn" id="login">Sign-In</a>
                 </div>
-
-
-            
+            </form>
         </div>
-
-
         <!-- Login starts -->
-
         <div class="form-container sign-in-container">
-            <!-- Login PHP -->
-            
-            
-                <h1 style="margin: 80px;">LOGIN</h1>
+            <h1>LOGIN</h1>
+            <form action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']) ?>" method="POST">
                 <input type="email" name="emailid" class="form__field" placeholder="Enter Username" id='username' required />
-
-                <input type="password" name="password" class="form__field" placeholder="Enter Password" id='name' required />
-            <br><div class="spacer" style="height: 10px;"></div>
-
+                <input type="password" name="password" class="form__field" placeholder="Enter Password" id='name' autocomplete="off" required />
+                </br>
                 <button value="login" name="loginbtn" href="#">Login</button>
-
-           
-            <div class="spacer" style="height: 20px;"></div>
-            <div class="small-device">
-                <p>Don't have an Account? </p>
-                <a class="btn" id="signUp">Create Now</a>
-            </div>
-
-
+                <div class="spacer" style="height: 20px;"></div>
+                <div class="small-device">
+                    <p>Don't have an Account? </p>
+                    <a class="btn" id="signUp">Create Now</a>
+                </div>
+            </form>
         </div>
         <div class="overlay-container">
             <div class="overlay">
@@ -122,7 +101,6 @@
         </div>
     </div>
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
-
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.0.1/js/bootstrap.min.js" integrity="sha512-EKWWs1ZcA2ZY9lbLISPz8aGR2+L7JVYqBAYTq5AXgBkSjRSuQEGqWx8R1zAX16KdXPaCjOCaKE8MCpU0wcHlHA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script>
         const signUpButton = document.getElementById('signUp');
@@ -136,9 +114,7 @@
         signInButton.addEventListener('click', () =>
             container.classList.remove('right-panel-active')
         );
-    </script>
 
-    <script>
         // bigger devices
         const signUpButtonBig = document.getElementById('signUp-big');
         const signInButtonBig = document.getElementById('login-big');

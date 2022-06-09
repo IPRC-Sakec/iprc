@@ -47,7 +47,7 @@
                     <?php
                     if (!isset($_SESSION['email'])) {
                     ?>
-                        <a href="login.php" class="button" style=" padding: 5px 15px; color: white;">Login</a>
+                        <a href="signup/signup.php" class="button" style=" padding: 5px 15px; color: white;">Login</a>
                     <?php
                     } else {
                     ?>

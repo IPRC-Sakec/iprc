@@ -4,9 +4,10 @@ spl_autoload_register('Myautoload');
 function Myautoload($className) {
     $path = "../classes/";
     $extension = ".class.php";
-    $fullPath = $path . $className."classes" . $extension;
+    $fullPath = $path . $className . $extension;
     if (!file_exists($fullPath)) {
         return false;
     }
     include_once $fullPath;
+    echo $fullPath;
 }
