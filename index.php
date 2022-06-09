@@ -1,7 +1,8 @@
 <?php
 
 declare(strict_types=1);
-// require_once 'classes/db.php';
+session_start();
+
 require_once 'requirements/autoload.php';
 require_once 'requirements/config.php';
 

@@ -51,7 +51,7 @@
                     <?php
                     } else {
                     ?>
-                        <a href="logout.php" class="button" style=" padding: 5px 15px; color: white;">Logout</a>
+                        <a href="signup/logout.php" class="button" style=" padding: 5px 15px; color: white;">Logout</a>
                     <?php
                     }
                     ?>

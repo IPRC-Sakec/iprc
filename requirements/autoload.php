@@ -9,5 +9,4 @@ function Myautoload($className) {
         return false;
     }
     include_once $fullPath;
-    echo $fullPath;
 }

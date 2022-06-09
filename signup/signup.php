@@ -14,44 +14,42 @@
 
 <body>
     <div class="container" id="container">
+        <!-- Sign up starts here -->
         <div class="form-container sign-up-container col-sm-12">
-        <?php //For developer : please do not modify name attribute and required status of the input fields 
-            ?>
+        <?php //For developer : please do not modify name attribute and required status of the input fields ?>
             <form action="signup.contr.php" method="POST">
-        <h1>SIGN UP</h1>
-            <p>Please enter all the fields carefully</p>
-
-            
-                <input name="fname" id='fname' type="text" placeholder="Enter First Name" required />
-                <input name="mname" id='mname' type="text" placeholder="Enter Middle Name" required />
-                <input name="lname" id='lname' type="text" placeholder="Enter Last Name" required />
-                <input name="email" id='email' type="email" placeholder="Enter Email" required />
-                <select name="department" id="department" required>
-                    <option value="none" selected disabled hidden>Select department</option>
-                    <option value="elec">Electronics and Computer Science</option>
-                    <option value="elc">Electronic Engineering</option>
-                    <option value="cs">Computer Engineering</option>
-                    <option value="it">Information Tecnology</option>
-                    <option value="extc">Electronics and Telecommunication</option>
-                    <option value="aids">Artificial Intelligence and Data Science</option>
-                    <option value="cybsec">Cyber Security</option>
-                </select>
-                <input name="password" id='password' type="password" placeholder="Enter password" autocomplete="off" required />
-                <input name="confirmPassword" id='cpassword' type="password" class="form__field" placeholder="Enter Comfirm password" autocomplete="off" required />
-                </br>
-                <button name="signup">Sign Up</button>
-                
-                <div class="spacer" style="height: 10px;"></div>
-                <div class="small-device">
-                    <p>Already have an Account! </p>
-                    <a class="btn" id="login">Sign-In</a>
-                </div>
+                <h1>SIGN UP</h1>
+                <p>Please enter all the fields carefully</p>
+                    <input name="fname" id='fname' type="text" placeholder="Enter First Name" required />
+                    <input name="mname" id='mname' type="text" placeholder="Enter Middle Name" required />
+                    <input name="lname" id='lname' type="text" placeholder="Enter Last Name" required />
+                    <input name="email" id='email' type="email" placeholder="Enter Email" required />
+                    <select name="department" id="department" required>
+                        <option value="none" selected disabled hidden>Select department</option>
+                        <option value="elec">Electronics and Computer Science</option>
+                        <option value="elc">Electronic Engineering</option>
+                        <option value="cs">Computer Engineering</option>
+                        <option value="it">Information Tecnology</option>
+                        <option value="extc">Electronics and Telecommunication</option>
+                        <option value="aids">Artificial Intelligence and Data Science</option>
+                        <option value="cybsec">Cyber Security</option>
+                    </select>
+                    <input name="password" id='password' type="password" placeholder="Enter password" autocomplete="off" required />
+                    <input name="confirmPassword" id='cpassword' type="password" class="form__field" placeholder="Enter Comfirm password" autocomplete="off" required />
+                    </br>
+                    <button name="signup">Sign Up</button>
+                    
+                    <div class="spacer" style="height: 10px;"></div>
+                    <div class="small-device">
+                        <p>Already have an Account! </p>
+                        <a class="btn" id="login">Sign-In</a>
+                    </div>
             </form>
         </div>
         <!-- Login starts -->
         <div class="form-container sign-in-container">
            
-        <form action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']) ?>" method="POST">
+        <form action="login.php" method="POST">
         <h1 style="margin: 80px;">LOGIN</h1>
                 <input type="email" name="emailid" class="form__field" placeholder="Enter Username" id='username' required />
                 <input type="password" name="password" class="form__field" placeholder="Enter Password" id='name' autocomplete="off" required />
