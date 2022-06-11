@@ -91,23 +91,21 @@ p {
 }
 
 button{  
-    background: rgb(59,146,191);
-    background: radial-gradient(circle, rgb(79, 171, 218) 0%, rgba(38,44,150,1) 100%);
+    background: #41c3ff;
+    background: linear-gradient(to right, #2bceff, #4154ff) no-repeat 0 0 / cover;
     border: 1px solid white;
     border-radius: 5px;	
-	padding: 8px 15px;
+	padding: 6px 25px;
 	color: rgb(255, 255, 255);
-	text-decoration: none; 
-	bottom: 2px ;   
+	text-decoration: none; 	   
     transition:0.5s;
 }	
 
 button:hover{
-    background: rgb(59,146,191);
-    background: radial-gradient(circle, rgb(92, 156, 240) 10%, rgba(38,44,150,1) 80%);
-    border: 1px solid rgba(38,44,150,1);
+    background: #41c3ff;
+    background: linear-gradient(to right, #4154ff, #2bceff) no-repeat 0 0 / cover;
+    border: 1px solid rgb(255, 255, 255);
     color: rgb(255, 255, 255);
-    box-shadow: 0 0 15px rgb(0, 0, 0);
 }
 
 button:active{
@@ -336,6 +334,10 @@ button.btn{
         position: fixed;
     left: 3%;
     transform: translateX(0%);
+    }
+
+    .forgot-password{
+        color: rgb(89, 245, 245);
     }
     
   }
