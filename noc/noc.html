@@ -1,0 +1,178 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>IPR | NOC Application</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.0.1/css/bootstrap.min.css" integrity="sha512-Ez0cGzNzHR1tYAv56860NLspgUGuQw16GiOOp/I2LuTmpSK9xDXlgJz3XN4cnpXWDmkNBKXR/VDMTCnAaEooxA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="stylesheet" href="../css/noc.css">
+
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+</head>
+
+<body>
+    <div class="container text-center" id="container">
+
+        <h1>Application of NOC</h1>
+        <div class="form-container ">
+        <form autocomplete="off">
+
+            <div class="row">
+                <div class="col-lg-12" id="form">
+                                  
+                    <div class="form__group field">
+                        <br>
+                        <input type="input" class="form-input" id="title" name="title" placeholder="Title" required>
+
+                    </div>
+                    <div class="form__group field">
+
+                        <input type="input" class="form-input" id="des" name="des" placeholder="Description" required>
+
+                    </div>
+                    <div class="form__group field">
+
+                        <input type="input" class="form-input" id="dairyno" name="dairyno" placeholder="Dairy Number" required>
+
+                    </div>
+                    <div id="inputFormRow">
+
+                        <div class="input-group-append mb-3">
+                            
+                            <button id="removeRow" type="button" class="button" hidden><i class="fas fa-times"></i> Remove</button>
+                            
+                        </div>
+
+                        <div class="form__group field">
+                            <input type="input" name="name_applicant[]" class="form-input" placeholder="Name of Applicant" autocomplete="off" required>
+
+                        </div>
+                        <div class="form__group field">
+                            <input type="email" name="email_applicant[]" class="form-input" placeholder="Email" autocomplete="off" required>
+
+                        </div>
+                        <div class="form__group field">
+
+                            <select id="role_applicant" class="form-select" name="role[]" >
+                                <option value="" disabled selected hidden>Select your Role</option>
+                                <option value="Author" style="color:black;">Author</option>
+                                <option value="Applicant" style="color:black;">Applicant</option>
+                                <option value="Both" style="color:black;">Both</option>
+                            </select>
+                        </div>
+                        <div class="spacer" style="height: 1px;"></div>
+
+                        <div class="form__group field">
+
+                            <select id="designation" class="form-select" name="designation[]">
+                                <option value="" disabled selected hidden>Select your Designation</option>
+                                <option value="asst. prof" style="color:black;">Asst . Prof</option>
+                                <option value="asso. prof" style="color:black;">Asso . Prof</option>
+                                <option value="student" style="color:black;">Student</option>
+                            </select>
+                        </div>
+                        
+                        
+                    </div>
+                    
+                    <div id="newRow"></div>
+                    <div class="spacer" style="height: 20px;"></div>
+                    <button id="addRow" type="button" class="button"><i class="fas fa-plus"></i> Add Member</button>
+
+                </div>
+                <input type="text" id="previewpdf1" name="previewpdf1" style="display:none;">
+                <input type="text" id="previewpdf2" name="previewpdf2" style="display: none;">
+                <div id="previewForm" style="overflow: scroll; height:450px;">
+                    <div style="background-color: white; padding:3%;" id="previewForm1">
+
+                        <p align="right" id="date"><br></p>
+                        <p>
+                            To<br>
+                            The Principal,<br>
+                            Shah and Anchor Kutchhi Engineering College,<br>
+                            Chembur<br>
+                        </p>
+                        <p>
+                            <b>Subject</b>: Application for permission to carry out the work and request to issue No Objection Certificate to file Intellectual Property .
+                        </p>
+                        <p>
+                            Respected Sir,
+                        </p>
+                        <p>
+                            I/We request you to kindly grant me/us the permission to carry out the work. The details of the work and applicants are mentioned below. I/We also request you to kindly issue the No Objection Certificate (NOC) for registering the below mentioned work to file the Copyright with Shah & Anchor Kutchhi Engineering College. As an applicant I/we also grant the privileges to Shah & Anchor Kutchhi Engineering College to use the work without any permission from the authors or applicants.
+                        </p>
+                        <p>
+                            <b>Details of the work:</b>
+                        </p>
+                        <p id="titlePreview">
+                            <b>Topic Name: </b>topic
+                        </p>
+                        <p id="descPreview">
+                            <b>Description: </b>desc
+                        </p>
+                        <p id="table">
+                        </p>
+                        <p id="last"></p>
+                    </div>
+                    <br>
+                    
+                    <div style="background-color: white; padding:3%;" id="previewForm2">
+                        <p align="right" id="date1"><br></p>
+                        <p>
+                            To,<br>
+                            Registrar of Copyrights,<br>
+                            Copyright Office,<br>
+                            Department for Promotion of Industry and Internal Trade,<br>
+                            Ministry of Commerce and Industry,<br>
+                            Boudhik Sampada Bhawan,<br>
+                            Plot No. 32, Sector 14, Dwarka,<br>
+                            New Delhi-110078<br>
+                            Email Address: copyright@nic.in<br>
+                            Telephone No.: 011-28032496<br>
+                        </p>
+                        <p align="center">
+                            <b>Subject: No Objection letter</b>
+                        </p>
+                        <p>
+                            Respected Sir / Madam,
+                        </p>
+                        <p id="l2topic"></p>
+                        <p align="right">
+                            Dr.Bhavesh Patel<br>
+                            Principal
+                        </p>
+                        <p id="last1"></p>
+
+                    </div>
+                
+                </div>
+                <br><br>
+                <div class="spacer" style="height: 30px;"></div>
+                <div class="row text-center">
+                    <div class="col-sm-12">
+                        <input type="radio" id="termsChkbx" onchange="isChecked(this,'submit');isChecked(this,'preview');" />
+                        <b>I Acknowledge that the above information is true and correct as per best of my knowledge <br> Also I Acknowledge that the data cannot be editted by any means after submitted</b>
+                    </div>
+                </div>
+                <div class="spacer" style="height: 30px;"></div>
+                <div class="row text-center">
+
+                    <div class="col-sm-6"> <button class="button" name="submit" id="submit" disabled="disabled">Submit Application</button></div>
+                    <div class="col-sm-6"> <button class="button" type="button" name="preview" id="preview" disabled="disabled">Preview Application</button></div>
+                </div>
+            </div>
+
+        </form>
+    </div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.0.1/js/bootstrap.min.js" integrity="sha512-EKWWs1ZcA2ZY9lbLISPz8aGR2+L7JVYqBAYTq5AXgBkSjRSuQEGqWx8R1zAX16KdXPaCjOCaKE8MCpU0wcHlHA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="../javascript/noc.js"></script>
+</body>
+
+</html>
