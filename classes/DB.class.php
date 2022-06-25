@@ -11,7 +11,6 @@ trait DB{
         if($this->conn->connect_errno){
             echo "<script>alert('Database connectivity failed contact admin')</>";
             die("Connection failed: ".$this->conn->connect_error);
-            
         }
     }
 }
