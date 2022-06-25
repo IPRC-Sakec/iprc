@@ -25,7 +25,7 @@
                     </li>
                     <li class="nav-item ">
                         <a class="nav-link " href="#roles">
-                            Our Team
+                            Team
                         </a>
 
                     </li>
@@ -37,9 +37,13 @@
                     </li>
                     <li class="nav-item ">
                         <a class="nav-link " href="#footer">
-                            Contact Us
+                            Contact
                         </a>
-
+                    </li>
+                    <li class="nav-item ">
+                        <a class="nav-link " href="dashboard.html">
+                            Dashboard
+                        </a>
                     </li>
 
                 </ul>

@@ -88,6 +88,7 @@ var previewForm = document.getElementById("previewForm");
             var html = '';
 
             html += `
+            <div class="spacer" style="height: 10px;"></div>
                     <div id="inputFormRow">
                     <div class="input-group-append mb-3">                
                         <button id="removeRow" type="button" class="button"><i class="fas fa-times"></i></button>

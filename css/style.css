@@ -127,7 +127,7 @@ p {
 
 /* Navbar */
  .bg-dark {
-    padding: 10px 20px;
+    padding: 10px 10px;
     transition: 500ms ease;
     font-family:  system-ui;
     background-color: transparent !important;
